@@ -1,0 +1,1072 @@
+﻿<!-- #region Header wrapper -->
+<div class="c-header-navigation-wrap" id="cid-header-nav">
+    <div class="c-container">
+        <div class="c-table">
+            <div class="c-cell c-w-1perc c-has-towards">
+                <h1><b>TOWARDS SDG 16</b></h1>
+            </div>
+            <div class="c-cell c-has-navigation">
+                <!-- #region LInks navigation // visible on lg -->
+                <ul class="c-horizontal-list c-top-nav-menu">
+                    <li ng-click="scrollToAnchorFunc('cid-our-presence')"><a>OUR PRESENCE</a></li>
+                    <li ng-click="scrollToAnchorFunc('svg-graph-master-wrap-slider')"><a>FACTS AND FIGURES</a></li>
+                    <li ng-click="scrollToAnchorFunc('cid-focus-areas-wrapper')"><a>FOCUS AREAS</a></li>
+                    <li ng-click="scrollToAnchorFunc('cid-foreword-content')"><a>OUR WORK</a></li>
+                </ul>
+                <!-- #endregion LInks navigation // visible on lg -->
+                <!-- #region Burger navigation // visible on xs -->
+                <div class="btn-group c-dropdown-btn-group">
+                    <button type="button" class="c-bttn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true">
+                        <i class="c-ico icon-menu"></i>
+                    </button>
+                    <ul id="cid-burger-dropdown-menu-lg" class="dropdown-menu dropdown-menu-right c-header-burger-dropdown">
+                        <li ng-click="scrollToAnchorFunc('cid-our-presence')"><a>OUR PRESENCE</a></li>
+                        <li ng-click="scrollToAnchorFunc('svg-graph-master-wrap-slider')"><a>FACTS AND FIGURES</a></li>
+                        <li ng-click="scrollToAnchorFunc('cid-focus-areas-wrapper')"><a>FOCUS AREAS</a></li>
+                        <li ng-click="scrollToAnchorFunc('cid-foreword-content')"><a>OUR WORK</a></li>
+                    </ul>
+                </div>
+                <!-- #endregion Burger navigation // visible on xs -->
+            </div>
+        </div>
+    </div>
+</div>
+<!-- #endregion Header wrapper -->
+<!-- #region Cover block -->
+<div class="c-wide-wrap c-has-cover-stripes">
+    <div class="c-stripes-wide-wrap">
+        <div class="c-container c-custom-click">
+            <!-- #region Main Cover -->
+            <div class="c-main-cover-background">
+                <!-- #region Text over content -->
+                <div class="c-text-over-wrap">
+                    <!-- #region UNDP logo -->
+                    <div class="c-content-block c-undp-logo-wrap">
+                        <object type="image/svg+xml" data="Content/images/undp-logo-standard.svg" class="c-svg-object">UNDP logo</object>
+                    </div>
+                    <!-- #endregion UNDP logo -->
+                    <!-- #region Title -->
+                    <div class="c-title-over-wrap">
+                        <div class="c-text-content">
+                            <!--<h1 class="c-32-400">TOWARDS SDG 16:</h1>-->
+                            <h2 class="c-34-400">Promoting Just, Peaceful and Inclusive Societies in Europe and Central Asia</h2>
+                        </div>
+                    </div>
+                    <!-- #endregion Title -->
+                    <!-- #region Description text -->
+                    <div class="c-description-over-wrap">
+                        <p class="c-txxt">In the Europe and Central Asia region, UNDP works with partners to strengthen inclusive and effective governance and sustain peace. This platform provides insights into how our work helps to make progress from 2015 onwards towards the realization of Sustainable Development Goals – with a focus on SDGs 5 & 16 – by 2030.</p>
+                    </div>
+                    <!-- #endregion Description text -->
+                </div>
+                <!-- #endregion Text over content -->
+            </div>
+            <!-- #endregion Main Cover -->
+        </div>
+        <!-- #region Color stripes -->
+        <div class="c-color-stripes-wrap">
+        </div>
+        <!-- #endregion Color stripes -->
+    </div>
+</div>
+<!-- #endregion Cover block -->
+<!-- #region Interactive map -->
+<div class="c-wide-wrap c-black-background" id="cid-our-presence">
+    <div class="c-container">
+        <!-- #region Title -->
+        <div class="c-section-title">
+            <h2 class="c-white-color">OUR PRESENCE</h2>
+        </div>
+        <!-- #endregion Title -->
+        <!-- #region Map container -->
+        <div class="c-map-content-wrap">
+            <!-- #region Actual map -->
+            <div class="c-map-container" id="mapdiv">
+            </div>
+            <!-- #endregion Actual map -->
+            <!-- #region Help controls -->
+            <div class="c-map-controls">
+                <div class="c-description-text">
+                    <div class="c-circle-icon-box">
+                        <i class="c-ico icon-location-pin"></i>
+                    </div>
+                    <p>Choose a location to see key results achieved with UNDP support.</p>
+                </div>
+            </div>
+            <!-- #endregion Help controls -->
+            <!-- #region Country Key results text -->
+            <div class="c-country-key-results-wrap c-show-when-lg" ng-if="ctrlVars.visibleStates.isCountryVisible">
+                <!-- #region Country title -->
+                <div class="c-country-title">
+                    <div class="c-table">
+                        <div class="c-cell">
+                            <span class="c-dynamic-country-title" ng-bind-html="to_trusted(ctrlVars.selectedCountry.title)"></span>
+                        </div>
+                        <div class="c-cell c-w-1perc" ng-click="toggleVisibility('countryOnMap')">
+                            <button class="c-bttn c-bttn-combo c-bttn-blue">
+                                <i class="c-ico icon-close"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- #endregion Country title -->
+                <!-- #region Key results content // LARGE RESOLUTIONS -->
+                <div class="c-key-results-content-flag">
+                    <div class="c-table">
+                        <!-- #region Text -->
+                        <div class="c-cell c-w-1perc">
+                            <p class="c-24-400 c-title-text">Key Results:</p>
+                            <div class="c-buttons-wrap">
+                                <!-- #region Learn more button -->
+                                <button class="c-bttn c-bttn-combo c-bttn-blue" ng-click="toggleVisibility('countryLearnMore_lg')" ng-if="!ctrlVars.visibleStates.isOpenCountryBACdata_lg">
+                                    <div class="c-circle-icon-box">
+                                        <i class="c-ico icon-login"></i>
+                                    </div>
+                                    <span>LEARN MORE</span>
+                                </button>
+                                <!-- #endregion Learn more button -->
+                                <!-- #region Close more button -->
+                                <button class="c-bttn c-bttn-combo c-bttn-blue" ng-click="toggleVisibility('countryLearnMore_lg')" ng-if="ctrlVars.visibleStates.isOpenCountryBACdata_lg">
+                                    <div class="c-circle-icon-box">
+                                        <i class="c-ico icon-close"></i>
+                                    </div>
+                                    <span>Close country profile</span>
+                                </button>
+                                <!-- #endregion Close more button -->
+                                <!-- #region Download section -->
+                                <a class="c-bttn c-bttn-combo c-bttn-blue" ng-href="{{ctrlVars.selectedCountry.sectionPdfUrl}}">
+                                    <div class="c-circle-icon-box">
+                                        <i class="c-ico icon-cloud-download"></i>
+                                    </div>
+                                    <span>DOWNLOAD SECTION</span>
+                                </a>
+                                <!-- #endregion Download section -->
+                            </div>
+                        </div>
+                        <!-- #endregion Text -->
+                        <!-- #region Flag -->
+                        <div class="c-cell c-has-key-items">
+                            <!-- #region Key results content -->
+                            <div class="c-key-results-content-wrap">
+                                <div class="c-body">
+                                    <!-- #region Icon & text -->
+                                    <div class="c-shell-repeater" ng-repeat="keyItem in ctrlVars.selectedCountry.keyResults" ng-class="{'c-has-5-items' : ctrlVars.selectedCountry.keyResults.length > 4, 'c-has-7-items' : ctrlVars.selectedCountry.keyResults.length > 6 }">
+                                        <div class="c-icon-text-content">
+                                            <div class="c-table">
+                                                <div class="c-cell c-w-1perc">
+                                                    <i class="xn {{keyItem.iconClass}}" aria-hidden="true"></i>
+                                                </div>
+                                                <div class="c-cell c-has-text">
+                                                    <p>{{keyItem.text}}</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- #endregion Icon & text -->
+                                </div>
+                            </div>
+                            <!-- #endregion Key results content -->                            
+                        </div>
+                        <!-- #endregion Flag -->
+                    </div>
+                </div>
+                <!-- #endregion Key results content // LARGE RESOLUTIONS -->
+            </div>
+            <!-- #endregion Country Key results text -->
+        </div>
+        <!-- #endregion Map container -->
+    </div>
+</div>
+<!-- #endregion Interactive map -->
+<!-- #region Expandable BAC content // LARGE RESOLUTIONS -->
+<div id="cid-bac-content-lg" name="cid-bac-content-lg" class="c-wide-wrap c-show-when-lg" ng-if="ctrlVars.visibleStates.isOpenCountryBACdata_lg && ctrlVars.visibleStates.isCountryVisible">
+    <div class="c-container">
+        <!-- #region Country Profile Wide Image Background // LARGE RESOLUTIONS -->
+        <div class="c-country-profile-wide-image-background {{ctrlVars.selectedCountry.flagClass}}"></div>
+        <!-- #endregion Country Profile Wide Image Background // LARGE RESOLUTIONS -->
+        <!-- #region BAC texts content // LARGE RESOLUTIONS -->
+        <div class="c-expandable-content-wrap c-blue-background">
+            <!-- #endregion Title -->
+            <div class="c-content-wrap c-show-when-lg">
+                <div class="c-table">
+                    <!-- #region Left content / Vertical navigation -->
+                    <div class="c-cell c-has-vertical-nav c-col-1-5-lg">
+                        <ul class="c-vertical-list c-expandable-nav c-blue-background">
+                            <li ng-click="changeCountryBACData(0)" ng-class="{'c-active' : ctrlVars.currentBACindex == 0}"><a>Background</a></li>
+                            <li ng-click="changeCountryBACData(1)" ng-class="{'c-active' : ctrlVars.currentBACindex == 1}"><a>Assistance and Impact</a></li>
+                            <li ng-click="changeCountryBACData(2)" ng-class="{'c-active' : ctrlVars.currentBACindex == 2}"><a>Challenges, Lessons Learned and Way Forward</a></li>
+                        </ul>
+                    </div>
+                    <!-- #endregion Left content / Vertical navigation -->
+                    <!-- #region Middle text -->
+                    <div class="c-cell c-has-text c-col-3-5-lg">
+                        <div id="cid-expandable-bac-wrapper" ng-class="{'c-max-h-700' : !ctrlVars.dataBindBAC.isTextExpanded}">
+                            <div id="cid-binded-bac-text" class="c-bind-txxt-wrapper c-custom-binded-text" ng-bind-html="to_trusted(ctrlVars.dataBindBAC.text)" ng-class="{'c-p-bottom-50' : ctrlVars.dataBindBAC.isTextExpanded}">
+                            </div>
+                        </div>
+                        <div class="c-read-more-feather-button c-blue-version" ng-if="ctrlVars.dataBindBAC.isLargeText">
+                            <button class="c-bttn c-bttn-combo c-bttn-blue" ng-click="toggleVisibility('bacContentMoreLess')">
+                                <div class="c-circle-icon-box">
+                                    <i class="c-ico icon-arrow-down" ng-if="!ctrlVars.dataBindBAC.isTextExpanded"></i>
+                                    <i class="c-ico icon-arrow-up" ng-if="ctrlVars.dataBindBAC.isTextExpanded"></i>
+                                </div>
+                                <span ng-if="!ctrlVars.dataBindBAC.isTextExpanded">SHOW MORE</span>
+                                <span ng-if="ctrlVars.dataBindBAC.isTextExpanded">SHOW LESS</span>
+                            </button>
+                            <!--<span ng-if="!ctrlVars.dataBindBAC.isTextExpanded">Show more&nbsp;&nbsp;<i class="c-ico icon-arrow-down"></i></span>
+                            <span ng-if="ctrlVars.dataBindBAC.isTextExpanded">Show less&nbsp;&nbsp;<i class="c-ico icon-arrow-up"></i></span>-->
+                        </div>
+                    </div>
+                    <!-- #endregion Middle text -->
+                    <!-- #region Right content -->
+                    <div class="c-cell c-has-right-content c-statement-right-content c-col-1-5-lg">
+                        <div ng-if="ctrlVars.dataBindStatement.imgThumb != ''" class="c-max-h-100perc">
+                            <!-- #region Statement text -->
+                            <p class="c-statement-body-txxt c-custom-binded-text" ng-bind-html="to_trusted(ctrlVars.dataBindStatement.bodyText)"></p>
+                            <p class="c-statement-signature-txxt c-custom-binded-text" ng-bind-html="to_trusted(ctrlVars.dataBindStatement.signatureText)"></p>
+                            <!-- #endregion Statement text -->
+                        </div>
+                    </div>
+                    <!-- #endregion Right content -->
+                </div>
+            </div>
+        </div>
+        <!-- #endregion BAC texts content // LARGE RESOLUTIONS -->
+    </div>
+</div>
+<!-- #endregion Expandable BAC content // LARGE RESOLUTIONS -->
+<!-- #region Expandable BAC content // SMALL RESOLUTIONS -->
+<div id="cid-bac-content-xs" name="id-bac-content-xs" class="c-wide-wrap c-show-when-xs" ng-if="ctrlVars.visibleStates.isCountryVisible">
+    <div class="c-container">
+        <div class="c-expandable-content-wrap c-blue-background">
+            <!-- #region Country title -->
+            <div class="c-country-key-title-padding-xs c-margin-top-negative-70">
+                <div class="c-country-title" ng-if="ctrlVars.visibleStates.isCountryVisible">
+                    <div class="c-table">
+                        <div class="c-cell">
+                            <span class="c-dynamic-country-title" ng-bind-html="to_trusted(ctrlVars.selectedCountry.title)"></span>
+                        </div>
+                        <div class="c-cell c-w-1perc" ng-click="toggleVisibility('countryOnMap')">
+                            <i class="c-ico icon-close"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- #endregion Country title -->
+            <!-- #region Country flag // SMALL RESOLUTIONS -->
+            <div class="c-key-results-content-flag" ng-if="ctrlVars.visibleStates.isCountryVisible">
+                <div class="c-table">
+                    <!-- #region Flag -->
+                    <div class="c-cell">
+                        <!-- #region Key results content -->
+                        <div class="c-key-results-content-wrap">
+                            <div class="c-header">
+                                <h4 class="c-24-400">Key Results</h4>
+                            </div>
+                            <div class="c-body">
+                                <!-- #region Icon & text -->
+                                <div class="c-shell-repeater" ng-repeat="keyItem in ctrlVars.selectedCountry.keyResults" ng-class="{'c-has-5-items' : ctrlVars.selectedCountry.keyResults.length > 4, 'c-has-7-items' : ctrlVars.selectedCountry.keyResults.length > 6 }">
+                                    <div class="c-icon-text-content">
+                                        <div class="c-table">
+                                            <div class="c-cell c-w-1perc">
+                                                <i class="xn {{keyItem.iconClass}}" aria-hidden="true"></i>
+                                            </div>
+                                            <div class="c-cell c-has-text">
+                                                <p>{{keyItem.text}}</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- #endregion Icon & text -->
+                            </div>
+                        </div>
+                        <!-- #endregion Key results content -->
+                    </div>
+                    <!-- #endregion Flag -->
+                    <div class="c-cell">
+                        <div class="c-buttons-wrap">
+                            <!-- #region Download section -->
+                            <a class="c-bttn c-bttn-combo c-bttn-blue" ng-href="{{ctrlVars.selectedCountry.sectionPdfUrl}}">
+                                <div class="c-circle-icon-box">
+                                    <i class="c-ico icon-cloud-download"></i>
+                                </div>
+                                <span>DOWNLOAD SECTION</span>
+                            </a>
+                            <!-- #endregion Download section -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- #endregion Country flag // SMALL RESOLUTIONS -->
+            <!-- #region Country Profile Wide Image Background // SMALL RESOLUTIONS -->
+            <div class="c-country-profile-wide-image-background {{ctrlVars.selectedCountry.flagClass}}"></div>
+            <!-- #endregion Country Profile Wide Image Background // SMALL RESOLUTIONS -->
+            <!-- #region BAC texts content // SMALL RESOLUTIONS -->
+            <div class="c-content-wrap">
+                <!-- #region Navigation content -->
+                <ul class="c-vertical-list c-xs-devices">
+                    <!-- #region Background -->
+                    <li>
+                        <a class="c-list-title" ng-click="changeCountryBACData(0)" ng-class="{'c-active' : ctrlVars.enumBAC[0].isXsContentVisible == true}">
+                            <div class="c-table">
+                                <div class="c-cell">Background</div>
+                                <div class="c-cell c-w-1perc">
+                                    <i class="c-ico icon-arrow-down" ng-if="ctrlVars.enumBAC[0].isXsContentVisible == false"></i>
+                                    <i class="c-ico icon-arrow-up" ng-if="ctrlVars.enumBAC[0].isXsContentVisible == true"></i>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <!-- #endregion Background -->
+                    <!-- #region Background Text content -->
+                    <li class="c-has-subcontent c-blue-background" ng-if="ctrlVars.enumBAC[0].isXsContentVisible == true">
+                        <div class="c-text-wrapper" ng-bind-html="ctrlVars.dataBindBAC.text"></div>
+                    </li>
+                    <!-- #endregion Background Text content -->
+                    <!-- #region Assistance and Impact -->
+                    <li>
+                        <a class="c-list-title" ng-click="changeCountryBACData(1)" ng-class="{'c-active' : ctrlVars.enumBAC[1].isXsContentVisible == true}">
+                            <div class="c-table">
+                                <div class="c-cell">Assistance and Impact</div>
+                                <div class="c-cell c-w-1perc">
+                                    <i class="c-ico icon-arrow-down" ng-if="ctrlVars.enumBAC[1].isXsContentVisible == false"></i>
+                                    <i class="c-ico icon-arrow-up" ng-if="ctrlVars.enumBAC[1].isXsContentVisible == true"></i>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <!-- #endregion Assistance and Impact -->
+                    <!-- #region Assistance and Impact Text content -->
+                    <li class="c-has-subcontent c-blue-background" ng-if="ctrlVars.enumBAC[1].isXsContentVisible == true">
+                        <div class="c-text-wrapper" ng-bind-html="ctrlVars.dataBindBAC.text"></div>
+                    </li>
+                    <!-- #endregion Assistance and Impact Text content -->
+                    <!-- #region Challanges, Lessons.. -->
+                    <li>
+                        <a class="c-list-title" ng-click="changeCountryBACData(2)" ng-class="{'c-active' : ctrlVars.enumBAC[2].isXsContentVisible == true}">
+                            <div class="c-table">
+                                <div class="c-cell">Challenges, Lessons Learned and Way Forward</div>
+                                <div class="c-cell c-w-1perc">
+                                    <i class="c-ico icon-arrow-down" ng-if="ctrlVars.enumBAC[2].isXsContentVisible == false"></i>
+                                    <i class="c-ico icon-arrow-up" ng-if="ctrlVars.enumBAC[2].isXsContentVisible == true"></i>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <!-- #endregion Challanges, Lessons.. -->
+                    <!-- #region Challanges, Lessons.. Text content -->
+                    <li class="c-has-subcontent c-blue-background" ng-if="ctrlVars.enumBAC[2].isXsContentVisible == true">
+                        <div class="c-text-wrapper" ng-bind-html="ctrlVars.dataBindBAC.text"></div>
+                    </li>
+                    <!-- #endregion Challanges, Lessons.. Text content -->
+                </ul>
+                <!-- #endregion Navigation content -->
+                <!-- #region Statement content -->
+                <div class="c-statement-right-content c-xs-content" ng-if="ctrlVars.dataBindStatement.bodyText != ''">
+                    <p class="c-statement-body-txxt c-custom-binded-text" ng-bind-html="to_trusted(ctrlVars.dataBindStatement.bodyText)"></p>
+                    <p class="c-statement-signature-txxt c-custom-binded-text" ng-bind-html="to_trusted(ctrlVars.dataBindStatement.signatureText)"></p>
+                </div>
+                <!-- #endregion Statement content -->
+            </div>
+            <!-- #endregion BAC texts content // SMALL RESOLUTIONS -->
+        </div>
+    </div>
+</div>
+<!-- #endregion Expandable BAC content // SMALL RESOLUTIONS -->
+<!-- #region Facts & Figures as Slider -->
+<div class="c-wide-wrap" id="svg-graph-master-wrap-slider">
+    <div class="c-container">
+        <!-- #region Title -->
+        <div class="c-section-title">
+            <h2>FACTS AND FIGURES</h2>
+        </div>
+        <!-- #endregion Title -->
+        <!-- #region Infographics wrapper -->
+        <div class="c-infographics-content-wrap">
+            <!-- Slider main container -->
+            <div class="swiper-container">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Single slide / albania -->
+                    <div class="swiper-slide">
+                        <div class="c-content-block c-svg-graph-wrap" id="cid-infographic-trigger-albania">
+                            <object type="image/svg+xml" data="Content/images/infographic-albania.svg" class="c-svg-object c-svg-faf" id="cid-infographic-albania-object">Infographic Albania</object>
+                        </div>
+                    </div>
+                    <!-- Single slide / armenia -->
+                    <div class="swiper-slide">
+                        <div class="c-content-block c-svg-graph-wrap" id="cid-infographic-trigger-armenia">
+                            <object type="image/svg+xml" data="Content/images/infographic-armenia.svg" class="c-svg-object c-svg-faf" id="cid-infographic-armenia-object">Infographic Armenia</object>
+                        </div>
+                    </div>
+                    <!-- Single slide / azerbaijan -->
+                    <div class="swiper-slide">
+                        <div class="c-content-block c-svg-graph-wrap" id="cid-infographic-trigger-azerbaijan">
+                            <object type="image/svg+xml" data="Content/images/infographic-azerbaijan.svg" class="c-svg-object c-svg-faf" id="cid-infographic-azerbaijan-object">Infographic Azerbaijan</object>
+                        </div>
+                    </div>
+                    <!-- Single slide / belarus -->
+                    <div class="swiper-slide">
+                        <div class="c-content-block c-svg-graph-wrap" id="cid-infographic-trigger-belarus">
+                            <object type="image/svg+xml" data="Content/images/infographic-belarus.svg" class="c-svg-object c-svg-faf" id="cid-infographic-belarus-object">Infographic Belarus</object>
+                        </div>
+                    </div>
+                    <!-- Single slide / bosnia -->
+                    <div class="swiper-slide">
+                        <div class="c-content-block c-svg-graph-wrap" id="cid-infographic-trigger-bosnia">
+                            <object type="image/svg+xml" data="Content/images/infographic-bosnia.svg" class="c-svg-object c-svg-faf" id="cid-infographic-bosnia-object">Infographic Bosnia</object>
+                        </div>
+                    </div>
+                    <!-- Single slide / georgia -->
+                    <div class="swiper-slide">
+                        <div class="c-content-block c-svg-graph-wrap" id="cid-infographic-trigger-georgia">
+                            <object type="image/svg+xml" data="Content/images/infographic-georgia.svg" class="c-svg-object c-svg-faf" id="cid-infographic-georgia-object">Infographic Georgia</object>
+                        </div>
+                    </div>
+                    <!-- Single slide / kazakhstan -->
+                    <div class="swiper-slide">
+                        <div class="c-content-block c-svg-graph-wrap" id="cid-infographic-trigger-kazakhstan">
+                            <object type="image/svg+xml" data="Content/images/infographic-kazakhstan.svg" class="c-svg-object c-svg-faf" id="cid-infographic-kazakhstan-object">Infographic Kazakhstan</object>
+                        </div>
+                    </div>
+                    <!-- Single slide / kosovo -->
+                    <div class="swiper-slide">
+                        <div class="c-content-block c-svg-graph-wrap" id="cid-infographic-trigger-kosovo">
+                            <object type="image/svg+xml" data="Content/images/infographic-kosovo.svg" class="c-svg-object c-svg-faf" id="cid-infographic-kosovo-object">Infographic Kosovo</object>
+                        </div>
+                    </div>
+                    <!-- Single slide / kyrgyz -->
+                    <div class="swiper-slide">
+                        <div class="c-content-block c-svg-graph-wrap" id="cid-infographic-trigger-kyrgyz">
+                            <object type="image/svg+xml" data="Content/images/infographic-kyrgyz.svg" class="c-svg-object c-svg-faf" id="cid-infographic-kyrgyz-object">Infographic Kyrgyz</object>
+                        </div>
+                    </div>
+                    <!-- Single slide / moldova -->
+                    <div class="swiper-slide">
+                        <div class="c-content-block c-svg-graph-wrap" id="cid-infographic-trigger-moldova">
+                            <object type="image/svg+xml" data="Content/images/infographic-moldova.svg" class="c-svg-object c-svg-faf" id="cid-infographic-moldova-object">Infographic Moldova</object>
+                        </div>
+                    </div>
+                    <!-- Single slide / montenegro -->
+                    <div class="swiper-slide">
+                        <div class="c-content-block c-svg-graph-wrap" id="cid-infographic-trigger-montenegro">
+                            <object type="image/svg+xml" data="Content/images/infographic-montenegro.svg" class="c-svg-object c-svg-faf" id="cid-infographic-montenegro-object">Infographic Montenegro</object>
+                        </div>
+                    </div>
+                    <!-- Single slide / serbia -->
+                    <div class="swiper-slide">
+                        <div class="c-content-block c-svg-graph-wrap" id="cid-infographic-trigger-serbia">
+                            <object type="image/svg+xml" data="Content/images/infographic-serbia.svg" class="c-svg-object c-svg-faf" id="cid-infographic-serbia-object">Infographic Serbia</object>
+                        </div>
+                    </div>
+                    <!-- Single slide / tajikistan -->
+                    <div class="swiper-slide">
+                        <div class="c-content-block c-svg-graph-wrap" id="cid-infographic-trigger-tajikistan">
+                            <object type="image/svg+xml" data="Content/images/infographic-tajikistan.svg" class="c-svg-object c-svg-faf" id="cid-infographic-tajikistan-object">Infographic Tajikistan</object>
+                        </div>
+                    </div>
+                    <!-- Single slide / macedonia -->
+                    <div class="swiper-slide">
+                        <div class="c-content-block c-svg-graph-wrap" id="cid-infographic-trigger-macedonia">
+                            <object type="image/svg+xml" data="Content/images/infographic-macedonia.svg" class="c-svg-object c-svg-faf" id="cid-infographic-macedonia-object">Infographic Macedonia</object>
+                        </div>
+                    </div>
+                    <!-- Single slide / turkey -->
+                    <div class="swiper-slide">
+                        <div class="c-content-block c-svg-graph-wrap" id="cid-infographic-trigger-turkey">
+                            <object type="image/svg+xml" data="Content/images/infographic-turkey.svg" class="c-svg-object c-svg-faf" id="cid-infographic-turkey-object">Infographic Turkey</object>
+                        </div>
+                    </div>
+                    <!-- Single slide / turkmenistan -->
+                    <div class="swiper-slide">
+                        <div class="c-content-block c-svg-graph-wrap" id="cid-infographic-trigger-turkmenistan">
+                            <object type="image/svg+xml" data="Content/images/infographic-turkmenistan.svg" class="c-svg-object c-svg-faf" id="cid-infographic-turkmenistan-object">Infographic Turkmenistan</object>
+                        </div>
+                    </div>
+                    <!-- Single slide / ukraine -->
+                    <div class="swiper-slide">
+                        <div class="c-content-block c-svg-graph-wrap" id="cid-infographic-trigger-ukraine">
+                            <object type="image/svg+xml" data="Content/images/infographic-ukraine.svg" class="c-svg-object c-svg-faf" id="cid-infographic-ukraine-object">Infographic Ukraine</object>
+                        </div>
+                    </div>
+                    <!-- Single slide / uzbekistan -->
+                    <div class="swiper-slide">
+                        <div class="c-content-block c-svg-graph-wrap" id="cid-infographic-trigger-uzbekistan">
+                            <object type="image/svg+xml" data="Content/images/infographic-uzbekistan.svg" class="c-svg-object c-svg-faf" id="cid-infographic-uzbekistan-object">Infographic Uzbekistan</object>
+                        </div>
+                    </div>
+                </div>
+                <!-- If we need navigation buttons -->
+                <div class="c-swiper-button-prev">
+                    <div class="c-circle-icon-box">
+                        <i class="c-ico icon-arrow-left" id="cid-arrow-left"></i>
+                    </div>
+                </div>
+                <div class="c-swiper-button-next">
+                    <div class="c-circle-icon-box">
+                        <i class="c-ico icon-arrow-right" id="cid-arrow-right"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- #endregion Infographics wrapper -->
+    </div>
+</div>
+<!-- #endregion Facts & Figures as Slider -->
+<!-- #region Focus areas -->
+<div class="c-wide-wrap" id="cid-focus-areas-wrapper">
+    <div class="c-container">
+        <!-- #region Title -->
+        <div class="c-section-title">
+            <h2>FOCUS AREAS</h2>
+        </div>
+        <!-- #endregion Title -->
+        <!-- #region Focus areas content -->
+        <div class="c-focus-areas-content-wrap">
+            <div class="c-table">
+                <!-- #region First content -->
+                <div class="c-cell c-black-border">
+                    <!-- #region Headline -->
+                    <h5 class="c-headline">{{ctrlVars.focusData[0].title}}</h5>
+                    <!-- #endregion Headline -->
+                    <!-- #region Text -->
+                    <p>{{ctrlVars.focusData[0].shortIntroText}}</p>
+                    <!-- #endregion Text -->
+                    <!-- #region Buttons -->
+                    <div class="c-buttons-wrap">
+                        <!-- #region Learn more button -->
+                        <button class="c-bttn c-bttn-combo" ng-click="toggleVisibility('focusAreasContent', 0)" ng-if="ctrlVars.visibleStates.visibleFocusAreaContentIndex != 0">
+                            <div class="c-circle-icon-box">
+                                <i class="c-ico icon-login"></i>
+                            </div>
+                            <span>LEARN MORE</span>
+                        </button>
+                        <!-- #endregion Learn more button -->
+                        <!-- #region Close more button -->
+                        <button class="c-bttn c-bttn-combo" ng-click="toggleVisibility('focusAreasContent', 0)" ng-if="ctrlVars.visibleStates.visibleFocusAreaContentIndex == 0">
+                            <div class="c-circle-icon-box">
+                                <i class="c-ico icon-close"></i>
+                            </div>
+                            <span>Close Focus Area</span>
+                        </button>
+                        <!-- #endregion Close more button -->
+                        <!-- #region Download section -->
+                        <a class="c-bttn c-bttn-combo" ng-href="{{ctrlVars.focusData[0].sectionPdfUrl}}">
+                            <div class="c-circle-icon-box">
+                                <i class="c-ico icon-cloud-download"></i>
+                            </div>
+                            <span>DOWNLOAD SECTION</span>
+                        </a>
+                        <!-- #endregion Download section -->
+                    </div>
+                    <!-- #endregion Buttons -->
+                    <!-- #region Include OKW content for small devices -->
+                    <div class="c-focus-areas-okw-content-xs-include-wrap" id="cid-included-okw-00" ng-include="'modules/home/views/include/focus-areas-okw-content-xs-devices.html'" ng-if="ctrlVars.visibleStates.visibleFocusAreaContentIndex == 0" ng-class="{'c-black-line-top' : ctrlVars.visibleStates.visibleFocusAreaContentIndex == 0}"></div>
+                    <!-- #endregion Include OKW content for small devices -->
+                </div>
+                <!-- #endregion First content -->
+                <!-- #region Second content -->
+                <div class="c-cell c-red-border">
+                    <!-- #region Headline -->
+                    <h5 class="c-headline">{{ctrlVars.focusData[1].title}}</h5>
+                    <!-- #endregion Headline -->
+                    <!-- #region Text -->
+                    <p>{{ctrlVars.focusData[1].shortIntroText}}</p>
+                    <!-- #endregion Text -->
+                    <!-- #region Buttons -->
+                    <div class="c-buttons-wrap">
+                        <!-- #region Learn more button -->
+                        <button class="c-bttn c-bttn-combo" ng-click="toggleVisibility('focusAreasContent', 1)" ng-if="ctrlVars.visibleStates.visibleFocusAreaContentIndex != 1">
+                            <div class="c-circle-icon-box">
+                                <i class="c-ico icon-login"></i>
+                            </div>
+                            <span>LEARN MORE</span>
+                        </button>
+                        <!-- #endregion Learn more button -->
+                        <!-- #region Close more button -->
+                        <button class="c-bttn c-bttn-combo" ng-click="toggleVisibility('focusAreasContent', 1)" ng-if="ctrlVars.visibleStates.visibleFocusAreaContentIndex == 1">
+                            <div class="c-circle-icon-box">
+                                <i class="c-ico icon-close"></i>
+                            </div>
+                            <span>Close Focus Area</span>
+                        </button>
+                        <!-- #endregion Close more button -->
+                        <!-- #region Download section -->
+                        <a class="c-bttn c-bttn-combo" ng-href="{{ctrlVars.focusData[1].sectionPdfUrl}}">
+                            <div class="c-circle-icon-box">
+                                <i class="c-ico icon-cloud-download"></i>
+                            </div>
+                            <span>DOWNLOAD SECTION</span>
+                        </a>
+                        <!-- #endregion Download section -->
+                    </div>
+                    <!-- #endregion Buttons -->
+                    <!-- #region Include OKW content for small devices -->
+                    <div class="c-focus-areas-okw-content-xs-include-wrap" id="cid-included-okw-01" ng-include="'modules/home/views/include/focus-areas-okw-content-xs-devices.html'" ng-if="ctrlVars.visibleStates.visibleFocusAreaContentIndex == 1" ng-class="{'c-blue-line-top' : ctrlVars.visibleStates.visibleFocusAreaContentIndex == 1}"></div>
+                    <!-- #endregion Include OKW content for small devices -->
+                </div>
+                <!-- #endregion Second content -->
+                <!-- #region Third content -->
+                <div class="c-cell c-blue-border">
+                    <!-- #region Headline -->
+                    <h5 class="c-headline">{{ctrlVars.focusData[2].title}}</h5>
+                    <!-- #endregion Headline -->
+                    <!-- #region Text -->
+                    <p>{{ctrlVars.focusData[2].shortIntroText}}</p>
+                    <!-- #endregion Text -->
+                    <!-- #region Buttons -->
+                    <div class="c-buttons-wrap">
+                        <!-- #region Learn more button -->
+                        <button class="c-bttn c-bttn-combo" ng-click="toggleVisibility('focusAreasContent', 2)" ng-if="ctrlVars.visibleStates.visibleFocusAreaContentIndex != 2">
+                            <div class="c-circle-icon-box">
+                                <i class="c-ico icon-login"></i>
+                            </div>
+                            <span>LEARN MORE</span>
+                        </button>
+                        <!-- #endregion Learn more button -->
+                        <!-- #region Close more button -->
+                        <button class="c-bttn c-bttn-combo" ng-click="toggleVisibility('focusAreasContent', 2)" ng-if="ctrlVars.visibleStates.visibleFocusAreaContentIndex == 2">
+                            <div class="c-circle-icon-box">
+                                <i class="c-ico icon-close"></i>
+                            </div>
+                            <span>Close Focus Area</span>
+                        </button>
+                        <!-- #endregion Close more button -->
+                        <!-- #region Download section -->
+                        <a class="c-bttn c-bttn-combo" ng-href="{{ctrlVars.focusData[2].sectionPdfUrl}}">
+                            <div class="c-circle-icon-box">
+                                <i class="c-ico icon-cloud-download"></i>
+                            </div>
+                            <span>DOWNLOAD SECTION</span>
+                        </a>
+                        <!-- #endregion Download section -->
+                    </div>
+                    <!-- #endregion Buttons -->
+                    <!-- #region Include OKW content for small devices -->
+                    <div class="c-focus-areas-okw-content-xs-include-wrap" id="cid-included-okw-02" ng-include="'modules/home/views/include/focus-areas-okw-content-xs-devices.html'" ng-if="ctrlVars.visibleStates.visibleFocusAreaContentIndex == 2" ng-class="{'c-red-line-top' : ctrlVars.visibleStates.visibleFocusAreaContentIndex == 2}"></div>
+                    <!-- #endregion Include OKW content for small devices -->
+                </div>
+                <!-- #endregion Third content -->
+                <!-- #region Fourth content -->
+                <div class="c-cell c-peach-border">
+                    <!-- #region Headline -->
+                    <h5 class="c-headline">{{ctrlVars.focusData[3].title}}</h5>
+                    <!-- #endregion Headline -->
+                    <!-- #region Text -->
+                    <p>{{ctrlVars.focusData[3].shortIntroText}}</p>
+                    <!-- #endregion Text -->
+                    <!-- #region Buttons -->
+                    <div class="c-buttons-wrap">
+                        <!-- #region Learn more button -->
+                        <button class="c-bttn c-bttn-combo" ng-click="toggleVisibility('focusAreasContent', 3)" ng-if="ctrlVars.visibleStates.visibleFocusAreaContentIndex != 3">
+                            <div class="c-circle-icon-box">
+                                <i class="c-ico icon-login"></i>
+                            </div>
+                            <span>LEARN MORE</span>
+                        </button>
+                        <!-- #endregion Learn more button -->
+                        <!-- #region Close more button -->
+                        <button class="c-bttn c-bttn-combo" ng-click="toggleVisibility('focusAreasContent', 3)" ng-if="ctrlVars.visibleStates.visibleFocusAreaContentIndex == 3">
+                            <div class="c-circle-icon-box">
+                                <i class="c-ico icon-close"></i>
+                            </div>
+                            <span>Close Focus Area</span>
+                        </button>
+                        <!-- #endregion Close more button -->
+                        <!-- #region Download section -->
+                        <a class="c-bttn c-bttn-combo" ng-href="{{ctrlVars.focusData[3].sectionPdfUrl}}">
+                            <div class="c-circle-icon-box">
+                                <i class="c-ico icon-cloud-download"></i>
+                            </div>
+                            <span>DOWNLOAD SECTION</span>
+                        </a>
+                        <!-- #endregion Download section -->
+                    </div>
+                    <!-- #endregion Buttons -->
+                    <!-- #region Include OKW content for small devices -->
+                    <div class="c-focus-areas-okw-content-xs-include-wrap" id="cid-included-okw-03" ng-include="'modules/home/views/include/focus-areas-okw-content-xs-devices.html'" ng-if="ctrlVars.visibleStates.visibleFocusAreaContentIndex == 3" ng-class="{'c-peach-line-top' : ctrlVars.visibleStates.visibleFocusAreaContentIndex == 3}"></div>
+                    <!-- #endregion Include OKW content for small devices -->
+                </div>
+                <!-- #end   region Fourth content -->
+            </div>
+        </div>
+        <!-- #endregion Focus areas content -->
+    </div>
+</div>
+<!-- #endregion Focus areas -->
+<!-- #region Expandable content -->
+<div id="cid-anchor-OKW-content" name="cid-anchor-OKW-content" class="c-wide-wrap c-black-background c-show-when-lg" ng-if="ctrlVars.visibleStates.isVisibleFocusAreaContent" ng-class="{'c-black-line-top' : ctrlVars.visibleStates.visibleFocusAreaContentIndex ==0, 'c-blue-line-top' : ctrlVars.visibleStates.visibleFocusAreaContentIndex ==1, 'c-red-line-top' : ctrlVars.visibleStates.visibleFocusAreaContentIndex ==2, 'c-peach-line-top' : ctrlVars.visibleStates.visibleFocusAreaContentIndex ==3}">
+    <div class="c-container">
+        <div class="c-expandable-content-wrap">
+            <!-- #region Title -->
+            <div class="c-title ">
+                <h3>{{ctrlVars.selectedFocusAreaData.title}}</h3>
+            </div>
+            <!-- #endregion Title -->
+            <!-- #region Content // LARGE RESOLUTIONS -->
+            <div class="c-content-wrap c-show-when-lg">
+                <div class="c-table">
+                    <!-- #region Left content / Vertical navigation -->
+                    <div class="c-cell c-has-vertical-nav c-col-1-5-lg">
+                        <ul class="c-vertical-list c-expandable-nav c-black-background" id="cid-okw-sto-prop">
+                            <li ng-click="changeCountryOKWData(0)" ng-class="{'c-active' : ctrlVars.currentOKWindex == 0}" class="c-sto-prop">
+                                <a>Overview</a>
+                            </li>
+                            <li ng-click="changeCountryOKWData(1)" ng-class="{'c-active' : ctrlVars.currentOKWindex == 1}" class="c-sto-prop">
+                                <a>Key trends</a>
+                            </li>
+                            <li class="c-has-subnavigation" ng-if="ctrlVars.currentOKWindex == 1">
+                                <!-- #region Subnavigation -->
+                                <ul class="c-subnavigation-list">
+                                    <li ng-repeat="textPartTitle in ctrlVars.dataBindOKW.textParts" ng-click="changeOKWpartText($index)" ng-class="{'c-active' : ctrlVars.textPartOKWindex == $index}">
+                                        <a>{{textPartTitle.partName}}</a>
+                                    </li>
+                                </ul>
+                                <!-- #endregion Subnavigation -->
+                            </li>
+                            <li ng-click="changeCountryOKWData(2)" ng-class="{'c-active' : ctrlVars.currentOKWindex == 2}" class="c-sto-prop">
+                                <a>What we do</a>
+                            </li>
+                            <li class="c-has-subnavigation" ng-if="ctrlVars.currentOKWindex == 2">
+                                <!-- #region Subnavigation -->
+                                <ul class="c-subnavigation-list c-max-h-315-scrl">
+                                    <li ng-repeat="textPartTitle in ctrlVars.dataBindOKW.textParts" ng-click="changeOKWpartText($index)" ng-class="{'c-active' : ctrlVars.textPartOKWindex == $index}">
+                                        <a>{{textPartTitle.partName}}</a>
+                                    </li>
+                                </ul>
+                                <!-- #endregion Subnavigation -->
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- #endregion Left content / Vertical navigation -->
+                    <!-- #region Middle text -->
+                    <div class="c-cell c-has-text c-col-3-5-lg">
+                        <div id="cid-expandable-okw-wrapper" ng-class="{'c-max-h-470' : !ctrlVars.dataBindOKW.isTextExpanded && ctrlVars.okwStatementHaveContent == false, 'c-max-h-815' : !ctrlVars.dataBindOKW.isTextExpanded && ctrlVars.okwStatementHaveContent == true, 'c-p-bottom-50' : ctrlVars.dataBindOKW.isTextExpanded}">
+                            <div id="cid-binded-okw-text" class="c-bind-txxt-wrapper c-custom-binded-text" ng-bind-html="to_trusted(ctrlVars.textPartOKWtoBind)">
+                            </div>
+                            <!-- #region Show Less/More button -->
+                            <div class="c-read-more-feather-button c-bottom-0" ng-show="ctrlVars.dataBindOKW.isLargeText" ng-hide="ctrlVars.textPardOKWhasAntrfile && ctrlVars.dataBindOKW.isTextExpanded || !ctrlVars.dataBindOKW.isLargeText">
+                                <button class="c-bttn c-bttn-combo" ng-click="toggleVisibility('okwContentMoreLess')">
+                                    <div class="c-circle-icon-box">
+                                        <i class="c-ico icon-arrow-down" ng-if="!ctrlVars.dataBindOKW.isTextExpanded"></i>
+                                        <i class="c-ico icon-arrow-up" ng-if="ctrlVars.dataBindOKW.isTextExpanded"></i>
+                                    </div>
+                                    <span ng-if="!ctrlVars.dataBindOKW.isTextExpanded">SHOW MORE</span>
+                                    <span ng-if="ctrlVars.dataBindOKW.isTextExpanded">SHOW LESS</span>
+                                </button>
+                            </div>
+                            <!-- #endregion Show Less/More button -->
+                        </div>
+                        <!--<div class="c-read-more-feather-button" ng-click="toggleVisibility('okwContentMoreLess')" ng-if="ctrlVars.dataBindOKW.isLargeText">
+                            <span ng-if="!ctrlVars.dataBindOKW.isTextExpanded">Show more&nbsp;&nbsp;<i class="c-ico icon-arrow-down"></i></span>
+                            <span ng-if="ctrlVars.dataBindOKW.isTextExpanded">Show less&nbsp;&nbsp;<i class="c-ico icon-arrow-up"></i></span>
+                        </div>-->
+                    </div>
+                    <!-- #endregion Middle text -->
+                    <!-- #region Right content -->
+                    <div class="c-cell c-has-right-content c-col-1-5-lg">                        
+                        <!-- #region SVG graphic -->
+                        <div ng-if="ctrlVars.currentOKWindex == 0">
+                            <p>Our work helps to meet targets under:</p>
+                            <div class="c-sdg-pictograms-wrap">
+                                <a class="c-sdg-pictograms-box c-lg c-gender" ng-click="openGenderPeaceModal('gender')">
+                                </a>
+                            </div>
+                            <div class="c-sdg-pictograms-wrap" ng-if="ctrlVars.currentOKWindex == 0">
+                                <a class="c-sdg-pictograms-box c-lg c-peace-justice" ng-click="openGenderPeaceModal('peace')">
+                                </a>
+                            </div>
+                        </div>
+                        <!-- #endregion SVG graphic -->
+                        <div class="c-pictograms-statement-wrapper" ng-if="ctrlVars.okwStatementHaveContent == true">
+                            <div class="c-right-content-statement-scroller">
+                                <p class="c-statement-body-txxt c-custom-binded-text" ng-bind-html="to_trusted(ctrlVars.okwStatementBodyTextTwo)"></p>
+                                <p class="c-statement-signature-txxt c-custom-binded-text" ng-bind-html="to_trusted(ctrlVars.okwStatementSignatureTextTwo)"></p>
+                            </div>
+                            <!-- #region Show Less/More button -->
+                            <!--<div class="c-read-more-feather-button" ng-class="{'c-relative' : ctrlVars.okwStatementExpanded}">
+                                <button class="c-bttn c-bttn-combo" ng-click="toggleVisibility('okwStatementPictograms')">
+                                    <div class="c-circle-icon-box">
+                                        <i class="c-ico icon-arrow-down" ng-if="!ctrlVars.okwStatementExpanded"></i>
+                                        <i class="c-ico icon-arrow-up" ng-if="ctrlVars.okwStatementExpanded"></i>
+                                    </div>
+                                    <span ng-if="!ctrlVars.okwStatementExpanded">SHOW MORE</span>
+                                    <span ng-if="ctrlVars.okwStatementExpanded">SHOW LESS</span>
+                                </button>
+                            </div>-->
+                            <!-- #endregion Show Less/More button -->
+                        </div>
+                    </div>
+                    <!-- #endregion Right content -->
+                </div>
+                <!-- #region Antrfile boxes -->
+                <!-- Attention: 'c-read-more-feather-button' in previous box will be invisible if this antrfile box has content  -->
+                <!-- what way we can use 'c-read-more-feather-button' button inside antrfile box to minimize entire OKW content  -->
+                <div class="c-antrfile-box-wrapper-lg" ng-if="ctrlVars.textPardOKWhasAntrfile && ctrlVars.dataBindOKW.isTextExpanded">
+                    <div class="c-table">
+                        <div class="c-cell c-col-1-5-lg"></div>
+                        <div class="c-cell c-col-3-5-lg">
+                            <div>
+                                <h3 ng-bind-html="to_trusted(ctrlVars.okwAntrfileTextTitle)"></h3>
+                                <div ng-bind-html="to_trusted(ctrlVars.okwAntrfileTextContent)" class="c-p-top-30 c-custom-binded-text"></div>
+                            </div>
+                            <!-- #region Show Less/More button -->
+                            <div class="c-read-more-feather-button c-antrfile-box" ng-if="ctrlVars.dataBindOKW.isTextExpanded">
+                                <button class="c-bttn c-bttn-combo" ng-click="toggleVisibility('okwContentMoreLess')">
+                                    <div class="c-circle-icon-box">
+                                        <i class="c-ico icon-arrow-up"></i>
+                                    </div>
+                                    <span>SHOW LESS</span>
+                                </button>
+                            </div>
+                            <!-- #endregion Show Less/More button -->
+                        </div>
+                        <!-- #region Right content -->
+                        <div class="c-cell c-statement-right-content">
+                            <div ng-if="ctrlVars.okwAntrfileStatementBodyText != ''" class="c-max-h-100perc">
+                                <!-- #region Statement text -->
+                                <!--<h5 class="c-statement-title" ng-bind-html="ctrlVars.dataBindStatement.title">Statement</h5>-->
+                                <p class="c-statement-body-txxt c-custom-binded-text" ng-bind-html="to_trusted(ctrlVars.okwAntrfileStatementBodyText)"></p>
+                                <p class="c-statement-signature-txxt c-custom-binded-text" ng-bind-html="to_trusted(ctrlVars.okwAntrfileStatementSignatureText)"></p>
+                                <!-- #endregion Statement text -->
+                            </div>
+                        </div>
+                        <!-- #endregion Right content -->
+                    </div>
+                </div>
+                <!-- #endregion Antrfile boxes -->
+            </div>
+            <!-- #endregion Content // LARGE RESOLUTIONS -->
+        </div>
+    </div>
+</div>
+<!-- #endregion Expandable content -->
+<!-- #region Regional context -->
+<div id="cid-foreword-content" name="cid-foreword-content" class="c-wide-wrap">
+    <div class="c-container c-p-bottom-40">
+        <!-- #region Title -->
+        <div class="c-section-title">
+            <h2>{{ctrlVars.forewordData.data.title}}</h2>
+        </div>
+        <!-- #endregion Title -->
+        <!-- #region Regional Context content -->
+        <div class="c-regional-text-content-wrap">
+            <div class="c-table">
+                <div class="c-cell c-has-text" ng-class="{'c-p-bottom-40-force' : !ctrlVars.forewordData.isTextExpanded}">
+                    <div ng-class="{'c-keep-max-h-content' : !ctrlVars.forewordData.isTextExpanded}">
+                        <div ng-bind-html="ctrlVars.forewordData.data.text" ng-class="{'c-p-bottom-50' : ctrlVars.forewordData.isTextExpanded}">
+                        </div>
+                    </div>
+                    <div class="c-read-more-feather-button c-white-version" ng-click="toggleVisibility('forwordContentMoreLess')" ng-class="{'c-bottom-0' : ctrlVars.forewordData.isTextExpanded}">
+                        <!-- #region Learn more button -->
+                        <button class="c-bttn c-bttn-combo">
+                            <div class="c-circle-icon-box">
+                                <i class="c-ico icon-arrow-down" ng-if="!ctrlVars.forewordData.isTextExpanded"></i>
+                                <i class="c-ico icon-arrow-up" ng-if="ctrlVars.forewordData.isTextExpanded"></i>
+                            </div>
+                            <span ng-if="!ctrlVars.forewordData.isTextExpanded">SHOW MORE</span>
+                            <span ng-if="ctrlVars.forewordData.isTextExpanded">SHOW LESS</span>
+                        </button>
+                        <!-- #endregion Learn more button -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- #endregion Regional Context content -->
+    </div>
+</div>
+<!-- #endregion Regional context -->
+<!-- #region Download Full Report -->
+<div class="c-wide-wrap c-download-full-report-background">
+    <div class="c-container">
+        <div class="c-download-full-report-box">
+            <a class="c-bttn" href="https://undpecis.github.io/download/towards-sdg-16-promoting-just-peaceful-and-inclusive-societies-in-europe.pdf" target="_blank">
+                <i class="c-ico icon-cloud-download"></i><br />
+                DOWNLOAD FULL <br />2015 REPORT
+            </a>
+        </div>
+    </div>
+</div>
+<!-- #endregion Download Full Report -->
+<!-- #region Footer -->
+<div class="c-wide-wrap c-footer-background">
+    <div class="c-container">
+        <!-- #region Footer for large resolutions -->
+        <div class="c-footer-content-wrap-lg">
+            <div class="c-table">
+                <!-- #region First column -->
+                <div class="c-cell">
+                    <!-- #region Title -->
+                    <div class="c-title">UNDP in Europe <br />and Central Asia</div>
+                    <!-- #endregion Title -->
+                    <!-- #region Content -->
+                    <p style="max-width:280px;">UNDP works in 22 countries and territories in the region, helping them to improve the standard of living for all citizens - especially those at greater risk of exclusion, such as ethnic minorities, persons with disabilities, internally displaced persons, rural populations, women and young people.</p>
+                    <!-- #endregion Content -->
+                    <!-- #region Social media buttons -->
+                    <ul class="c-horizontal-list c-social-medial-links-list">
+                        <li><a class="c-icon-bttn-facebook" href="https://www.facebook.com/UNDPinEuropeandCIS" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                        <li><a class="c-icon-bttn-twitter" href="https://twitter.com/UNDPEurasia" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                        <li><a class="c-icon-bttn-instagram" href="https://www.instagram.com/undpeurasia" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                        <li><a href="http://www.eurasia.undp.org" target="_blank"><i class="fa fa-home" aria-hidden="true"></i></a></li>
+                    </ul>
+                    <!-- #endregion Social media buttons -->
+                </div>
+                <!-- #endregion First column -->
+                <!-- #region Second column -->
+                <div class="c-cell">
+                    <!-- #region Title -->
+                    <div>
+                        <div class="c-title">QUICK LINKS</div>
+                    </div>
+                    <!-- #endregion Title -->
+                    <!-- #region Content -->
+                    <div class="c-footer-quick-links-images-wrapper">
+                        <!-- #region First image -->
+                        <div class="c-row">
+                            <a class="c-link-logo c-sus-logo" href="http://www.un.org/sustainabledevelopment/sustainable-development-goals/" target="_blank"></a>
+                        </div>
+                        <!-- #endregion First image -->
+                        <!-- #region Second images -->
+                        <div class="c-row">
+                            <div class="c-table">
+                                <div class="c-cell c-w-50perc c-valign-middle">
+                                    <a class="c-link-logo c-deca-logo" href="http://www.odecanet.org" target="_blank"></a>
+                                </div>
+                                <div class="c-cell c-w-50perc c-valign-middle">
+                                    <a class="c-link-logo c-seesac-logo" href="http://www.seesac.org/" target="_blank"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- #endregion Second images -->
+                    </div>
+                    <!-- #endregion Content -->
+                </div>
+                <!-- #endregion Second column -->
+                <!-- #region Third column -->
+                <div class="c-cell">
+                    <!-- #region Title -->
+                    <div class="c-title">CONTACT US</div>
+                    <!-- #endregion Title -->
+                    <!-- #region Content -->
+                    <p>Governance and Peacebuilding Cluster<br />UNDP Regional Hub<br />Istanbul, Turkey</p>
+                    <p><span class="c-white-color">Email :&nbsp;</span><a class="c-link-text" href="mailto:registry.rsci@undp.org?Subject=From%20UNDP%20ECIS" target="_top">registry.rsci@undp.org</a></p>
+                    <p><span class="c-white-color">Website:&nbsp;</span><a class="c-link-text" href="http://www.eurasia.undp.org/" target="_blank">www.eurasia.undp.org</a></p>
+                    <!-- #endregion Content -->
+                </div>
+                <!-- #endregion Third column -->
+            </div>
+            <div class="c-copy-wrap">
+                <div class="c-table">
+                    <div class="c-cell c-align-center">
+                        <p style="padding-bottom:20px;" class="c-kosovo-footnote-txxt c-align-center"><sup>1</sup>All references to Kosovo shall be understood to be in the context of Security Council resolution 1244 (1999).</p>
+                        <p class="c-align-center">Copyright 2017. All Rights Reserved by UNDP in Europe and Central Asia</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- #endregion Footer for large resolutions -->
+        <!-- #region Footer for small resolutions -->
+        <div class="c-footer-content-wrap-xs">
+            <ul class="c-vertical-list c-xs-devices c-footer-nav-items" id="cid-footer-navigations-xs">
+                <!-- #region UNDP ECIS -->
+                <li ng-click="toggleVisibility('footerNav_xs', 0)" class="c-clickable-item">
+                    <a class="c-list-title" ng-class="{'c-active' : ctrlVars.enumFooter[0].isXsSubContentActive == true}">
+                        <div class="c-table">
+                            <div class="c-cell">UNDP ECIS</div>
+                            <div class="c-cell c-w-1perc">
+                                <i class="c-ico icon-arrow-down" ng-if="ctrlVars.enumFooter[0].isXsSubContentActive == false"></i>
+                                <i class="c-ico icon-arrow-up" ng-if="ctrlVars.enumFooter[0].isXsSubContentActive == true"></i>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="c-has-subcontent c-footer-background" ng-if="ctrlVars.enumFooter[0].isXsSubContentActive == true">
+                    <div class="c-text-wrapper">
+                        <!-- #region Title -->
+                        <div class="c-title">UNDP in Europe <br />and Central Asia</div>
+                        <!-- #endregion Title -->
+                        <!-- #region Content -->
+                        <p>UNDP works in 22 countries and territories in the region, helping them to improve the standard of living for all citizens - especially those at greater risk of exclusion, such as ethnic minorities, persons with disabilities, internally displaced persons, rural populations, women and young people.</p>
+                        <!-- #endregion Content -->
+                        <!-- #region Social media buttons -->
+                        <ul class="c-horizontal-list c-social-medial-links-list">
+                            <li><a class="c-icon-bttn-facebook" href="https://www.facebook.com/UNDPinEuropeandCIS" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                            <li><a class="c-icon-bttn-twitter" href="https://twitter.com/UNDPEurasia" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                            <li><a class="c-icon-bttn-instagram" href="https://www.instagram.com/undpeurasia" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                            <li><a href="http://www.eurasia.undp.org" target="_blank"><i class="fa fa-home" aria-hidden="true"></i></a></li>
+                        </ul>
+                        <!-- #endregion Social media buttons -->
+                    </div>
+                </li>
+                <!-- #endregion UNDP ECIS -->
+                <!-- #region QUICK LINKS -->
+                <li ng-click="toggleVisibility('footerNav_xs', 1)" class="c-clickable-item">
+                    <a class="c-list-title" ng-class="{'c-active' : ctrlVars.enumFooter[1].isXsSubContentActive == true}">
+                        <div class="c-table">
+                            <div class="c-cell">QUICK LINKS</div>
+                            <div class="c-cell c-w-1perc">
+                                <i class="c-ico icon-arrow-down" ng-if="ctrlVars.enumFooter[1].isXsSubContentActive == false"></i>
+                                <i class="c-ico icon-arrow-up" ng-if="ctrlVars.enumFooter[1].isXsSubContentActive == true"></i>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="c-has-subcontent c-footer-background c-p-10" ng-if="ctrlVars.enumFooter[1].isXsSubContentActive == true">
+                    <!-- #region Content -->
+                    <div class="c-footer-quick-links-images-wrapper">
+                        <!-- #region First image -->
+                        <div class="c-row">
+                            <a class="c-link-logo c-sus-logo" href="http://www.un.org/sustainabledevelopment/sustainable-development-goals/" target="_blank"></a>
+                        </div>
+                        <!-- #endregion First image -->
+                        <!-- #region Second images -->
+                        <div class="c-row">
+                            <div class="c-table">
+                                <div class="c-cell c-w-50perc c-valign-middle">
+                                    <a class="c-link-logo c-deca-logo" href="http://www.un.org/sustainabledevelopment/sustainable-development-goals/" target="_blank"></a>
+                                </div>
+                                <div class="c-cell c-w-50perc c-valign-middle">
+                                    <a class="c-link-logo c-seesac-logo" href="http://www.un.org/sustainabledevelopment/sustainable-development-goals/" target="_blank"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- #endregion Second images -->
+                    </div>
+                    <!-- #endregion Content -->
+                </li>
+                <!-- #endregion QUICK LINKS -->
+                <!-- #region CONTACT US -->
+                <li ng-click="toggleVisibility('footerNav_xs', 3)" class="c-clickable-item">
+                    <a class="c-list-title" ng-class="{'c-active' : ctrlVars.enumFooter[3].isXsSubContentActive == true}">
+                        <div class="c-table">
+                            <div class="c-cell">CONTACT US</div>
+                            <div class="c-cell c-w-1perc">
+                                <i class="c-ico icon-arrow-down" ng-if="ctrlVars.enumFooter[3].isXsSubContentActive == false"></i>
+                                <i class="c-ico icon-arrow-up" ng-if="ctrlVars.enumFooter[3].isXsSubContentActive == true"></i>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="c-has-subcontent c-footer-background" ng-if="ctrlVars.enumFooter[3].isXsSubContentActive == true">
+                    <div class="c-text-wrapper">
+                        <!-- #region Content -->
+                        <p>Governance and Peacebuilding Cluster<br />UNDP Regional Hub<br />Istanbul, Turkey</p>
+                        <p><span class="c-white-color">Email :&nbsp;</span><a class="c-link-text" href="mailto:registry.rsci@undp.org?Subject=From%20UNDP%20ECIS" target="_top">registry.rsci@undp.org</a></p>
+                        <p><span class="c-white-color">Website:&nbsp;</span><a class="c-link-text" href="http://www.eurasia.undp.org/" target="_blank">www.eurasia.undp.org</a></p>
+                        <!-- #endregion Content -->
+                    </div>
+                </li>
+                <!-- #endregion CONTACT US -->
+            </ul>
+            <!-- #region Single item -->
+            <div class="c-copy-content c-align-center">
+                <p class="c-kosovo-footnote-txxt"><sup>1</sup>All references to Kosovo shall be understood to be in the context of Security Council resolution 1244 (1999).</p>
+                <p>Copyright 2017. All Rights Reserved by UNDP in Europe and Central Asia</p>
+            </div>
+            <!-- #endregion Single item -->
+        </div>
+        <!-- #endregion Footer for small resolutions -->
+    </div>
+</div>
+<!-- #endregion Footer -->
+<script src="Scripts/controllers/index-controller.js"></script>
